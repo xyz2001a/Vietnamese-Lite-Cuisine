@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="cart.js"></script> <!-- 新增脚本 -->
+    <title>Your Cart</title>
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <a href="menu.html" class="add-more">Add More Items</a>
+    </header>
+
+    <main>
+        <ul id="cart-items"></ul>
+        <div class="summary">
+            <p>Total Price: $<span id="total-price">0.00</span></p>
+            <p>Tax (10%): $<span id="tax">0.00</span></p>
+            <p><strong>Total with Tax: $<span id="final-total">0.00</span></strong></p>
+        </div>
+        <button class="place-order" onclick="placeOrder()">Place Order</button>
+    </main>
+</body>
+</html>

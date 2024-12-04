@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script> <!-- 改为 menu.js 脚本 -->
+    <title>Explore Menu</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="./images/logo.jpg" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html" id="home">Home</a>
+            <a href="cart.html" id="cart">🛒 Cart</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <main>
+        <h1>Explore Menu</h1>
+        <div class="categories">
+            <button onclick="showCategory('pho')">Pho</button>
+            <button onclick="showCategory('bahn-mi')">Bahn Mi</button>
+            <button onclick="showCategory('vermicelli-bowl')">Vermicelli Bowl</button>
+            <button onclick="showCategory('summer-roll')">Summer Roll</button>
+            <button onclick="showCategory('beverage')">Beverage</button>
+        </div>
+
+        <div id="menu-items" class="menu-items"></div>
+    </main>
+
+    <!-- Food Detail Modal -->
+    <div id="food-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="food-image" src="" alt="Food Image">
+            <h2 id="food-title"></h2>
+            <p id="food-description"></p>
+            <p id="food-price"></p>
+            <div class="quantity-control">
+                <button onclick="changeQuantity(-1)">-</button>
+                <span id="food-quantity">1</span>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+            <button id="place-order" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
